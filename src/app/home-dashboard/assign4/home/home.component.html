@@ -1,0 +1,9 @@
+<p>assign4 works!{{title}}</p>
+<div class="search-hero">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
+  </div>
+<div *ngFor="let t of data | filter:searchText">
+    <app-child   [scriptDetails]="t">
+   
+    </app-child>  
+</div>
